@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url('Coolvetica Rg.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'schoolbell';
+    src: url('Schoolbell-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'creatodisplay';
+    src: url('CreatoDisplay-Regular.otf') format('opentype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("fundo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #000000;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.navbar .links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: 'coolvetica', sans-serif;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.navbar li a:hover {
+    background-color: #1d1d1d;
+}
+
+.container-neuronio {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    height: calc(100vh - 90px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#neuronio {
+    width: 100%;
+    height: auto;
+    max-height: 78vh;
+    display: block;
+    object-fit: contain;
+    transform: scale(2)
+}
+
+.botao1 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border: 0;
+    top: 5%;
+    left: -10%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1.35)
+}
+
+.botao2 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border: 0;
+    top: 25%;
+    left: 23%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1.35)
+}
+
+.botao3 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border: 0;
+    top: 45%;
+    left: 33%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1.35)
+}
+
+.botao4 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border: 0;
+    top: 80%;
+    left: 70%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1.35)
+}
+
+.botao5 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border: 0;
+    top: 35%;
+    left: 97%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1.35)
+}
+
+.botao1:hover, .botao2:hover, .botao3:hover, .botao4:hover, .botao5:hover {
+    transform: scale(1.1);
+}
+
+.fechar {
+    background-image: linear-gradient(to right, #7956a6, #3a7bd5);
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'creatodisplay';
+    color: white;
+    margin-top: 15px;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.texto_botao {
+    font-family: 'schoolbell';
+    font-size: 1.2rem;
+    color: #7956a6;
+}
+
+.popup {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.inner-popup {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 380px;
+}
+
+.inner-popup h1 {
+    font-family: 'schoolbell';
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.inner-popup p {
+    font-family: 'creatodisplay';
+    font-size: 1.1rem;
+    padding: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    .container-neuronio {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .botao1, .botao2, .botao3, .botao4, .botao5 {
+        padding: 6px 10px;
+    }
+    
+    .texto_botao {
+        font-size: 0.9rem;
+    }
+}
